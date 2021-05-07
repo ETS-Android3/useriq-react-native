@@ -98,7 +98,12 @@ public class UserIQReactNativeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void setUser(ReadableMap readableMap) {
+    public void setUser(ReadableMap readableMap) {        
+        if (getCurrentActivity() == null) {
+            Log.e(TAG, "setUser failed: Current activity is null");
+            return;
+        }
+        
         Log.d(TAG, "setUser: " + readableMap.toString());
         UserIQSDK.UserBuilder userBuilder = new UserIQSDK.UserBuilder();
 
@@ -149,7 +154,7 @@ public class UserIQReactNativeModule extends ReactContextBaseJavaModule {
         }
 
         UserIQSDK.User user = userBuilder.build();
-        UserIQSDK.setUser(user);
+        UserIQSDK.setUser(getCurrentActivity(), user);
     }
 
     private HashMap<String, Object> convertReadableMapToHashMap(ReadableMap readableMap) {
