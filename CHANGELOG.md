@@ -3,6 +3,12 @@
 All notable changes in Android SDK are documented here. We adhere to
 [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+### [2.8.3] - 2021-05-17
+
+[Android Changelog](https://github.com/useriq-com/android-sdk/blob/master/CHANGELOG.md#283---2021-05-17)
+
+---
+
 ### [2.8.2] - 2021-05-04
 
 [Android Changelog](https://github.com/useriq-com/android-sdk/blob/master/CHANGELOG.md#282---2021-05-04)
